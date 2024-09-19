@@ -130,6 +130,10 @@ main {
     text-align: center;
 }
 
+.card .dev-resources li {
+    padding: 5px 0 0 0;
+}
+
 footer {
     grid-column: 1 / 3;
     background: var(--accent1-color);
