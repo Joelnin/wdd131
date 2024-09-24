@@ -7,7 +7,7 @@ const h1 = document.querySelector('h1');
 hamButton.addEventListener('click', () => {
 	navigation.classList.toggle('open');
 	hamButton.classList.toggle('open');
-    h1.classList.toggle('hide');
+    h1.classList.toggle('open');
 });
 
 const navPages= document.querySelectorAll('a');

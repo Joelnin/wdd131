@@ -41,7 +41,7 @@ h1 {
     margin: auto 0;
 }
 
-.hide {
+h1.open {
     display: none;
 }
 
@@ -90,6 +90,7 @@ nav {
 	text-decoration: none;
 	color: var(--primary-color);
 }
+
 .navigation a:hover {
 	background-color: var(--nav-hover-background-color);
 	color: var(--nav-hover-link-color);
@@ -104,7 +105,6 @@ nav {
 .active {
 	background-color: var(--nav-hover-background-color);
     border-bottom: 2px solid var(--nav-hover-link-color);
-    border-top: 2px solid var(--nav-hover-link-color);
 }
 
 .container {
@@ -120,19 +120,6 @@ figure img {
     width: 300px;
     height: auto;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 footer {
     grid-column: 1 / 3;

@@ -9,6 +9,10 @@
 		grid-template-columns: 2fr 1fr;
 	}
 
+	h1.open {
+		display: block;
+	}
+
 	#menu {
 		display: none;
 	}
