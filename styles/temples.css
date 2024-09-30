@@ -63,7 +63,6 @@ nav {
 	font-size: 1.5rem;
 	border: 0;
 	background: none;
-	color: var(--primary-color);
 	position: absolute;
 	top: 1rem;
 	right: 1rem;
@@ -71,6 +70,7 @@ nav {
 
 #menu::before {
 	content: "☰";
+    /* color: var(--primary-color); */
 }
 
 #menu.open::before {
