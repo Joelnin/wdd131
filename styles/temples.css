@@ -70,7 +70,7 @@ nav {
 
 #menu::before {
 	content: "☰";
-    /* color: var(--primary-color); */
+    color: var(--primary-color);
 }
 
 #menu.open::before {
