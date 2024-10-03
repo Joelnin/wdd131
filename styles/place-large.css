@@ -1,0 +1,73 @@
+@media screen and (min-width: 550px) {
+
+    :root {
+        --primary-color: rgba(30, 28, 28, 1);
+        --card-background-color: rgb(236, 243, 242, 0.8);
+        --accent1-color: rgb(12, 116, 177);
+        --accent2-color: rgb(7, 101, 78);
+    }
+
+    .hero img {
+        min-block-size: 35rem;
+    }
+
+    .card {
+        position: absolute;
+        border: none;
+    }
+
+    .card-header img {
+        display: none;
+    }
+
+    .weather .card-header h2::after {
+        content: " 🌤";
+    }
+
+    main {
+        position: relative;
+    }
+
+    .data {
+        top: 2rem;
+        left: 2rem;
+        width: 400px;
+    }
+
+    .weather {
+        top: 21rem;
+
+        right: 2rem;
+        width: 350px;
+    }
+
+    .card-header {
+        background-color: var(--accent2-color);
+        text-align: left;
+        padding: 0.6rem 11rem 0.8rem 1.2rem;
+        position: absolute;
+        top: 1.5rem;
+    }
+
+    .card-header h2 {
+        color: var(--secondary-color);
+    }
+    
+    .card-content {
+        background-color: var(--card-background-color);
+        padding: 5rem 1rem 1rem;
+        margin: 0 0 0 2rem;
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+    :root {
+        --accent1-color: rgb(58, 48, 19);
+        --accent2-color: rgb(190, 210, 76);
+    }
+
+    .card-header h2 {
+        color: var(--primary-color);
+    }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>WDD 131 - Thailand</title>
+    <meta name="description" content="Thailand basic Info.">
+    <meta name="author" content="Joelnin Rodriguez">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <link rel="icon" href="images/place.ico" type="image/x-icon">
+    <script defer src="scripts/place.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Thailand</h1>
+    </header>
+
+    <main class="container">
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 1000px)" srcset="images/hero-large.webp">
+                <source media="(min-width: 550px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-small.webp" alt="">
+            </picture>
+        </div>
+
+        <div class="data card">
+
+            <div class="card-header">
+                <h2>Data</h2>         
+            </div>
+
+            <div class="card-content">
+
+                <div>
+                    <p>Official Name:</p>
+                    <p>Area:</p>
+                    <p>Population:</p>
+                    <p>Capital:</p>
+                    <p>Official Languages:</p>
+                    <p>Currency:</p>
+                    <p>Time Zone:</p>
+                    <p>Calling Code:</p>
+                    <p>Internet TLD:</p>
+
+                </div>
+
+                <div>
+                    <p>Kingdom of Thailand</p>
+                    <p>513,115 sq km</p>
+                    <p>65,975,198</p>
+                    <p>Bangkok</p>
+                    <p>Thai</p>
+                    <p>Thai baht (฿) (THB)</p>
+                    <p>UTC+7 (ICT)</p>
+                    <p>+66</p>
+                    <p>.th</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="weather card">
+
+            <div class="card-header">
+                <h2>Weather</h2>
+                <img src="images/weather-icon.svg" alt="Weather icon">
+            </div>
+
+            <div class="card-content">
+
+                <div>
+                    <p>Temperature:</p>
+                    <p>Conditions:</p>
+                    <p>Wind:</p>
+                    <p>Wind Chill:</p>
+                </div>
+
+                <div>
+                    <p><span id="temperature"></span></p>
+                    <p><span id="conditions"></span></p>
+                    <p><span id="wind"></span></p>
+                    <p><span id="windchill"></span></p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>
+            ©<span id="currentyear"></span> | Joelnin Rodriguez | Venezuela
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
+</html>
