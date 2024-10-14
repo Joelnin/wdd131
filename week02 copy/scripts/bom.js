@@ -59,8 +59,6 @@ function displayList(item) {
     deleteButton.classList.add('delete');
     li.append(deleteButton);
     list.append(li);
-    input.value = '';
-    input.focus();
 
     deleteButton.addEventListener('click', function () {
       list.removeChild(li);
