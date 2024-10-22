@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>TTB - Basic Strategies</title>
+    <meta name="description" content="This page covers simple yet effective tactics, perfect for beginners looking to strengthen their understanding and improve their skills on the board.">
+    <meta name="author" content="Joelnin Rodriguez">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/chess.css">
+    <link rel="stylesheet" href="styles/chess-large.css">
+    <link rel="icon" href="../images/pawn.ico" type="image/x-icon">
+    <script defer src="scripts/chess.js"></script>
+</head>
+<body>
+    <header>
+        <h1>THE TIMELESS BOARD</h1>
+        <div>
+            <button type="button" id="menu" aria-label="Menu button"> </button>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="index.html" class="home">Home</a></li>
+                    <li><a href="origins.html" class="origins">Origins</a></li>
+                    <li><a href="pieces.html" class="pieces">Pieces</a></li>
+                    <li><a href="strategies.html" class="active strategies">Strategies</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <button class="to-top not-visible" id="to-top">
+            <span>&#9650;</span>
+        </button> 
+
+        <div class="top">
+            <div class="hero">
+                <picture>
+                    <source media="(min-width: 1000px)" srcset="images/hero-large.webp">
+                    <source media="(min-width: 640px)" srcset="images/hero-medium.webp">
+                    <img src="images/hero-small.webp" alt="Chess Fantasy" width="200" height="300" loading="lazy">
+                </picture>
+            </div>
+
+            <div class="hero-content">
+                
+                <h2>Strategies</h2>
+                <h3>Master an art of strategy, one move at a time</h3>
+
+                <p>Learn the foundational strategies that every chess player needs to know. Get to know simple yet effective tactics, perfect for beginners looking to strengthen their understanding and improve their skills on the board.</p>
+
+            </div>
+        </div>
+
+        <div id="container">
+
+            <div id="strategies-sum" class="summary">
+            </div>
+    
+            <div id="strategies" class="extended-info">
+            </div> 
+
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            ©<span id="currentyear"></span> | Joelnin Rodriguez | Venezuela
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

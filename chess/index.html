@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>TTB - Home</title>
+    <meta name="description" content="The Timeless Board Home page. Summary of all the features and info the websitehas to offer.">
+    <meta name="author" content="Joelnin Rodriguez">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/chess.css">
+    <link rel="stylesheet" href="styles/chess-large.css">
+    <link rel="icon" href="../images/pawn.ico" type="image/x-icon">
+    <script defer src="scripts/chess.js"></script>
+</head>
+<body>
+    <header>
+        <h1>THE TIMELESS BOARD</h1>
+        <div>
+            <button type="button" id="menu" aria-label="Menu button"> </button>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="index.html" class="active home">Home</a></li>
+                    <li><a href="origins.html" class="origins">Origins</a></li>
+                    <li><a href="pieces.html" class="pieces">Pieces</a></li>
+                    <li><a href="strategies.html" class="strategies">Strategies</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="homepage-main">
+        <button class="to-top not-visible" id="to-top">
+            <span>&#9650;</span>
+        </button> 
+
+        <div class="top">
+            <div class="hero">
+                <picture>
+                    <source media="(min-width: 1000px)" srcset="images/hero-large.webp">
+                    <source media="(min-width: 640px)" srcset="images/hero-medium.webp">
+                    <img src="images/hero-small.webp" alt="Chess Fantasy" width="200" height="300" loading="lazy">
+                </picture>
+            </div>
+
+            <div class="hero-content">
+                
+                <h2>The Timeless Board</h2>
+                
+                <h3>Step into a world where strategy and elegance meet</h3>
+
+                <p>The Timeless Board aims to inspire a passion for chess by providing easy-to-understand resources that help players at all levels improve their game. We're here to make chess accessible, engaging, and enjoyable for everyone who wants to explore its depth and beauty.</p>
+
+            </div>
+        </div>
+
+        <div>
+            <h2>ORIGINS</h2>
+            <section id="origins-cards" class="summary">
+            </section>
+        </div>
+        
+        <div>
+            <h2>PIECES</h2>
+            <section id="pieces-cards" class="summary">
+            </section>
+        </div>
+        
+        <div>
+            <h2>STRATEGY</h2>
+            <section id="strategy-card" class="summary">
+            </section>
+        </div>
+
+
+
+
+        <section id="form" class="form">
+            <form>
+                <h2>SUBSCRIPTION FORM</h2>
+                <div class="inspiration">
+                    <p>Pensamiento de tipo muerto que a gente encuetra inspirador. <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste qui dolorum atque soluta esse fugiat quaerat perferendis aperiam praesentium, iure laborum, numquam, nulla commodi consequatur.</p>
+                    <img src="" alt="">
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>Name:</legend>
+                        <label for="name"></label><input type="text" id="name" name="name" placeholder="Jane Austen">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Email:</legend>
+                        <label for="email"></label><input type="email" id="email" name="email" placeholder="someone@email.com">
+                    </fieldset>
+
+                    <label for="checkbox"><input type="checkbox" id="checkbox" name="checkbox" value="yes">Subscribe to <b>Daily Newspaper</b>.</label>
+
+                    <input type="submit" value="Subscribe to Newspaper">
+
+                </div>
+            </form>
+        </section>
+
+        <section id="form-message" class="form hidden">
+
+            <h2>Thank you for subscribing to our newspaper!</h2>
+                        
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            ©<span id="currentyear"></span> | Joelnin Rodriguez | Venezuela
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
