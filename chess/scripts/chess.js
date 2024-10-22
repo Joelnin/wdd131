@@ -12,9 +12,6 @@ hamButton.addEventListener('click', () => {
 
 // Arrays with the information for all pages.
 
-// According to legend, it was created to simulate the complexities of war and teach strategy to noble families.
-//
-
 const arrays = {
 
     origins: [
@@ -543,7 +540,7 @@ const toTop = (() => {
     window.onscroll = () => {
       button.classList [
           (document.documentElement.scrollTop > 200) ? 'remove' : 'add'
-        ]('not-visible')
+        ]('not-reveal')
     }
     button.onclick = () => {
       window.scrollTo({
@@ -977,8 +974,6 @@ function formSubmit() {
         thankYouMessage.classList.remove('not-reveal');
     });
 }
-
-
 
 // Footer
 

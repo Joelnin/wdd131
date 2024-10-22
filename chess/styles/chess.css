@@ -176,9 +176,7 @@ li .active {
     background-color: var(--nav-link-color);
 }
 
-.not-visible {
-    opacity: 0;
-}
+
 
 
 
