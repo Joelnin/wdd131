@@ -193,7 +193,7 @@ li .active {
     margin-bottom: 1rem;
 }
 
-.close-button:hover,  {
+.close-button:hover {
     background-color: var(--accent2-color);
     color: var(--secondary-color);
 }
@@ -250,7 +250,7 @@ li .active {
     background-color: var(--card-hover);
 }
 
-.card:hover .card-header,  {
+.card:hover .card-header {
     border-bottom: 5px double var(--accent1-color);
 }
 
