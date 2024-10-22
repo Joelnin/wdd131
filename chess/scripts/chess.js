@@ -571,6 +571,7 @@ if (originsPage) {
 
 } else {
     createHomePage(arrays);
+    formSubmit();
 }
 
 // Origins long-stories' template.
@@ -964,18 +965,18 @@ function addCloseButton(section) {
 
 // Dealing with the Form
 
-const form = document.getElementById('form');
-const subscribeSection = document.getElementById('subscribe-section');
-const thankYouMessage = document.getElementById('form-message');
+function formSubmit() {
+    const form = document.getElementById('form');
+    const subscribeSection = document.getElementById('subscribe-section');
+    const thankYouMessage = document.getElementById('form-message');
 
-form.addEventListener('submit', function(event) {
-    event.preventDefault(); 
-    
-    subscribeSection.classList.add('not-reveal');
-    thankYouMessage.classList.remove('not-reveal');
-});
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); 
 
-
+        subscribeSection.classList.add('not-reveal');
+        thankYouMessage.classList.remove('not-reveal');
+    });
+}
 
 
 
