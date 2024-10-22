@@ -193,7 +193,7 @@ li .active {
     margin-bottom: 1rem;
 }
 
-.close-button:hover {
+.close-button:hover,  {
     background-color: var(--accent2-color);
     color: var(--secondary-color);
 }
@@ -246,11 +246,11 @@ li .active {
     padding: 1rem;
 }
 
-.card:hover {
+.card:hover, .home-card > a:hover, #strategy-card a:hover {
     background-color: var(--card-hover);
 }
 
-.card:hover .card-header {
+.card:hover .card-header,  {
     border-bottom: 5px double var(--accent1-color);
 }
 
@@ -403,7 +403,7 @@ input[type="submit"]:hover {
     border: none;
 }
 
-.profile-header img {
+.profile-header img, .turn img {
     border: none;
 }
 
@@ -456,9 +456,6 @@ input[type="submit"]:hover {
     max-width: 350px;
 }
 
-.turn img {
-    border: none;
-}
 
 .winner, .home-card > a, #strategy-card a {
     color: var(--accent1-color);
@@ -466,11 +463,6 @@ input[type="submit"]:hover {
     padding: 1rem;
     border-radius: 1rem;
 }
-
-
-
-
-
 
 /* Footer */
 
