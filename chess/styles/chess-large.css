@@ -1,3 +1,5 @@
+
+
 @media screen and (min-width: 640px) {
 
     :root {
@@ -42,6 +44,19 @@
     }
 
     .card {
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px 2px var(--accent1-color);
+    }
+
+    .home-summary {
+        flex-direction: row;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        gap: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .home-card {
         border-radius: 10px;
         box-shadow: 2px 2px 10px 2px var(--accent1-color);
     }
@@ -144,6 +159,30 @@
         flex: 1 1 100%;
     }
 
+    .home-summary p {
+        display: block;
+        padding: 1rem;
+    }
+
+    .home-card {
+        justify-content: space-between;
+    }
+
+    .home-last {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+    }
+
+    .home-last > div:first-child {
+        border: 5px solid var(--accent2-color);
+    }
+
+    .form {
+        width: 100%;
+    }
+    
+
+
     /* Pieces */
 
     #profile > .long-info {
@@ -168,16 +207,11 @@
         align-items: center;
     }
 
-
     .other-info {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         border-left: 5px solid var(--accent1-color);
-
-        
-        /* border-top: 5px solid var(--accent1-color);
-        border-bottom: 5px solid var(--accent1-color); */
     }
 }
 
@@ -188,8 +222,11 @@
         --card-hover: rgb(41, 114, 162, 0.1);
     }
 
-    .winner {
+    .winner, .home-card > a, #strategy-card a {
         color: var(--secondary-color)
     }
 
+    .home-last {
+        grid-template-columns: 400px 1fr;
+    }
 }

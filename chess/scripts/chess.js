@@ -12,6 +12,9 @@ hamButton.addEventListener('click', () => {
 
 // Arrays with the information for all pages.
 
+// According to legend, it was created to simulate the complexities of war and teach strategy to noble families.
+//
+
 const arrays = {
 
     origins: [
@@ -20,7 +23,7 @@ const arrays = {
             id: "india",
             shortName: "The Indian Legend of Chaturanga",
             longName: "The Legend of King Shihram and the Birth of Chess",
-            summary: 'Chess is widely believed to have originated in India around the 6th century under the name Chaturanga, which means "four divisions of the military" in Sanskrit. According to legend, it was created to simulate the complexities of war and teach strategy to noble families.',
+            summary: 'Chess is widely believed to have originated in India around the 6th century under the name Chaturanga, which means "four divisions of the military" in Sanskrit. ',
             storyLong: [
                 "In ancient India, King Shihram was devastated by the loss of his son in battle. His grief clouded his mind, making him question the meaning of leadership and the endless cycle of war. One day, a wise sage named Sissa ibn Dahir visited the king, offering a solution to ease his sorrow. Sissa introduced the king to a new game—chess—designed to teach the values of strategy, sacrifice, and the balance of power. Each piece on the board, from the humble pawn to the mighty king, represented different elements of a kingdom and warfare.",
 
@@ -43,7 +46,7 @@ const arrays = {
             id: "persia",
             shortName: "The Persian Game of Shatranj",
             longName: "A Tale of Shah and Vizier",
-            summary: 'As Chaturanga spread westward, it reached Persia, where it became known as Shatranj. Shatranj introduced the term “Shah,” meaning king, and “Shah Mat,” meaning the king is helpless, which evolved into the modern term "checkmate."',
+            summary: 'In Persia, it became known as Shatranj. Shatranj introduced the term "Shah," meaning "king", and "Shah Mat," meaning "the king is helpless."',
             storyLong: [
                 "In Persia, a story tells of a king who was challenged by a game that would later evolve into modern chess. This legend focuses on the Persian king, Shah Khosrow I, and his vizier, Buzurjmihr, known for his incredible wisdom. According to this tale, a foreign king sent Shah Khosrow a mysterious game board along with a challenge: If the Persians could figure out the rules and master the game, they would be declared wise; if not, they would face humiliation.",
 
@@ -66,7 +69,7 @@ const arrays = {
             id: "china",
             shortName: "The Chinese Xiangqi",
             longName: "The Chinese Emperor's Challenge",
-            summary: "Some believe that chess could have evolved from ancient Chinese games, particularly Xiangqi, or Chinese Chess. Xiangqi shares many similarities with chess, such as the goal of capturing the opponent's general, and both games involve complex strategies.",
+            summary: 'Chess could have evolved from the ancient Chinese game "Xiangqi." Xiangqi shares many similarities with chess, such as the goal of capturing the opponent\'s general.',
             storyLong: [
                 "A intriguing story comes from China, where chess is thought to have roots in a game called Xiangqi, or Chinese Chess. This tale begins with an emperor named Wu Di, during the Han dynasty, faced unrest in his empire as warlords vied for power. To strengthen his leadership and show that warfare wasn't always necessary to maintain control, he commissioned a court strategist to invent a game that represented battle but could be won through clever strategy rather than actual bloodshed.",
 
@@ -171,7 +174,7 @@ const arrays = {
             summary: "The Knight's unpredictable movement reflects the ability to flank enemies and launch surprise attacks, just as cavalry did on medieval battlefields.",
 
 
-            role: "The Knight moves in an “L” shape: two squares in one direction and one square perpendicular. It is the only piece that can jump over others, making it uniquely positioned to launch unexpected attacks.",
+            role: 'The Knight moves in an "L" shape: two squares in one direction and one square perpendicular. It is the only piece that can jump over others, making it uniquely positioned to launch unexpected attacks.',
 
             importance: "Knights, like cavalry, are unpredictable and can strike in places where other pieces can't reach. Their ability to jump over obstacles means they often catch the opponent off-guard. The Knight's unusual movement makes it a key tool for creating disruptive, tactical strikes.",
 
@@ -838,32 +841,29 @@ function createCardTemplate(element) {
     return anchor;
 }
 
-function createHomePageCard(element, pageURL) {
+function createHomePageCard(element, pageURL, resumeDecision) {
 
     let anchor = document.createElement('a');
 
     let card = document.createElement('div');
     let elementName = document.createElement('h3');
-    let cardSummary = document.createElement('p');
-    let cardHeader = document.createElement('div');
 
     elementName.textContent = capitalize(element.shortName);
-    cardHeader.setAttribute('class', 'card-header');
+    card.appendChild(elementName);
 
     summaryImage = getImgWithAttributes(element.imageSummary.imageURL, element.imageSummary.imageAlt);
+    card.appendChild(summaryImage);
 
-    cardSummary.textContent = element.summary;
+    if (!resumeDecision) {
+        let cardSummary = document.createElement('p');
+        cardSummary.textContent = element.summary;
+        card.appendChild(cardSummary);
+    }
 
-    anchor.textContent = 'More';
+    anchor.textContent = 'Read more';
 
-    card.setAttribute('class', 'card');
+    card.setAttribute('class', 'home-card');
     anchor.setAttribute('href', pageURL);
-
-    cardHeader.appendChild(elementName);
-    cardHeader.appendChild(summaryImage);
-
-    card.appendChild(cardHeader);
-    card.appendChild(cardSummary);
 
     card.appendChild(anchor);
 
@@ -910,7 +910,7 @@ function createSpecificPage(pageName, specificPage, cardsID, longInfoID) {
     });
 }
 
-function createHomePage(pagesArray) {
+function createHomePage(arrays) {
 
     let originCards = document.querySelector('#origins-cards');
     let pieceCards = document.querySelector('#pieces-cards');
@@ -919,7 +919,7 @@ function createHomePage(pagesArray) {
     // For origins y pieces cards
     for (let i = 0; i < 3; i++) {
         let origin = arrays.origins[i];
-        let piece = arrays.pieces[i + 1];
+        let piece = arrays.pieces[i + 1]; // Skip the Board one.
 
         let originCard = createHomePageCard(origin, 'origins.html');
 
@@ -934,6 +934,7 @@ function createHomePage(pagesArray) {
     let random = Math.floor(Math.random() * arrays.strategies.length);
 
     let strategyCard = createHomePageCard(arrays.strategies[random], 'strategies.html');
+    strategyCard.setAttribute('class', 'strategy-home')
     strategyRandom.appendChild(strategyCard);
 }
 
@@ -962,6 +963,23 @@ function addCloseButton(section) {
 
     return closeButton;
 }
+
+// Dealing with the Form
+
+const form = document.getElementById('form');
+const subscribeSection = document.getElementById('subscribe-section');
+const thankYouMessage = document.getElementById('form-message');
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    
+    subscribeSection.classList.add('not-reveal');
+    thankYouMessage.classList.remove('not-reveal');
+});
+
+
+
+
 
 // Footer
 
