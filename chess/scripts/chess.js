@@ -841,7 +841,7 @@ function createCardTemplate(element) {
     return anchor;
 }
 
-function createHomePageCard(element, pageURL, resumeDecision) {
+function createHomePageCard(element, pageURL, elementType) {
 
     let anchor = document.createElement('a');
 
@@ -854,13 +854,11 @@ function createHomePageCard(element, pageURL, resumeDecision) {
     summaryImage = getImgWithAttributes(element.imageSummary.imageURL, element.imageSummary.imageAlt);
     card.appendChild(summaryImage);
 
-    if (!resumeDecision) {
-        let cardSummary = document.createElement('p');
-        cardSummary.textContent = element.summary;
-        card.appendChild(cardSummary);
-    }
+    let cardSummary = document.createElement('p');
+    cardSummary.textContent = element.summary;
+    card.appendChild(cardSummary);
 
-    anchor.textContent = 'Read more';
+    anchor.textContent = `Go to ${elementType}`;
 
     card.setAttribute('class', 'home-card');
     anchor.setAttribute('href', pageURL);
@@ -921,9 +919,9 @@ function createHomePage(arrays) {
         let origin = arrays.origins[i];
         let piece = arrays.pieces[i + 1]; // Skip the Board one.
 
-        let originCard = createHomePageCard(origin, 'origins.html');
+        let originCard = createHomePageCard(origin, 'origins.html', 'Origins');
 
-        let pieceCard = createHomePageCard(piece, 'pieces.html');
+        let pieceCard = createHomePageCard(piece, 'pieces.html', 'Pieces');
 
         originCards.appendChild(originCard);
         pieceCards.appendChild(pieceCard);       
@@ -933,7 +931,7 @@ function createHomePage(arrays) {
 
     let random = Math.floor(Math.random() * arrays.strategies.length);
 
-    let strategyCard = createHomePageCard(arrays.strategies[random], 'strategies.html');
+    let strategyCard = createHomePageCard(arrays.strategies[random], 'strategies.html', 'Strategies');
     strategyCard.setAttribute('class', 'strategy-home')
     strategyRandom.appendChild(strategyCard);
 }
