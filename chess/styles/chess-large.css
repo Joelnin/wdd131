@@ -218,7 +218,7 @@
 @media screen and (min-width: 1000px) {
 
     :root {
-        --accent1-color: rgb(41, 114, 162);
+        --accent1-color: rgb(29, 80, 114);
         --card-hover: rgb(41, 114, 162, 0.1);
     }
 
