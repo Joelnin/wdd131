@@ -919,7 +919,7 @@ function createHomePage(arrays) {
 
         let originCard = createHomePageCard(origin, 'origins.html', 'Origins');
 
-        let pieceCard = createHomePageCard(piece, 'pieces.html', 'Pieces');
+        let pieceCard = createHomePageCard(piece, 'pieces.html', 'Pieces Profile');
 
         originCards.appendChild(originCard);
         pieceCards.appendChild(pieceCard);       
